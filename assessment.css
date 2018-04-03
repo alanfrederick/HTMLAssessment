@@ -5,6 +5,8 @@ Your headers should be changed to your favorite color and set to a sans-serif fo
 
 .subjectHeader {
   color: grey;
+  font-style: sans-serif;
+  font: Arial;
 }
 
 /*User Story #2
