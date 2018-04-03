@@ -1,3 +1,5 @@
+
+
 /*User Story #1
 Your headers should be changed to your favorite color and set to a sans-serif font. (Notice they are not all the same tag!)*/
 
@@ -43,17 +45,21 @@ Make each team's image the background image for the list. Hint Check out the ele
 img {
   visibility: hidden;
 }
+/*Solid background images can make foreground text hard to read; find a way to have each team's image display behind its roster, but reduced intensity. Do not edit the image itself.*/
 
-#teamRoster > li:last-child{
+#teamRoster>li:last-child {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg);
   background-repeat: no-repeat;
   background-size: auto;
+  opacity: .80;
 }
 
-#teamRoster > li:first-child{
-background-image: url(https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg);
-background-repeat: no-repeat;
-background-size: 250px;
+
+#teamRoster>li:first-child {
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  opacity: .80;
 }
 
 /*User Story #7
@@ -61,4 +67,23 @@ The checkbox list should not be bulleted.*/
 
 #checkbox-grid {
   list-style-type: none;
+}
+
+/*Stretch Goals*/
+
+/*Have each team's primary quarterback display in bold.*/
+
+#teamRoster >li:last-child >ul>li:last-child>ol>li:first-child,
+#teamRoster >li:first-child>ul>li:last-child>ol>li:first-child{
+  font-weight: bold;
+}
+
+/*Use CSS to give the table rows alternating background colors.*/
+
+tr:nth-child(even) {
+  background: grey;
+}
+
+tr:nth-child(odd) {
+  background: white;
 }
