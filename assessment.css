@@ -44,25 +44,16 @@ blockquote {
 /*User Story #6
 Make each team's image the background image for the list. Hint Check out the element > element and :first-child / :last-child selectors.*/
 
-img {
-  visibility: hidden;
-}
 /*Solid background images can make foreground text hard to read; find a way to have each team's image display behind its roster, but reduced intensity. Do not edit the image itself.*/
-
-#teamRoster>li:last-child {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  opacity: .80;
+#teamRoster>li>img{
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 50px;
+  z-index: -1;
+  opacity: .3;
 }
 
 
-#teamRoster>li:first-child {
-  background-image: url(https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg);
-  background-repeat: no-repeat;
-  background-size: 250px;
-  opacity: .80;
-}
 
 /*User Story #7
 The checkbox list should not be bulleted.*/
@@ -79,6 +70,8 @@ The checkbox list should not be bulleted.*/
 #teamRoster >li:first-child>ul>li:last-child>ol>li:first-child{
   font-weight: bold;
 }
+
+
 
 /*Use CSS to give the table rows alternating background colors.*/
 
